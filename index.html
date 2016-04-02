@@ -275,7 +275,7 @@
               
             </span>
           
-          <span class="post-count">&nbsp; | &nbsp;字数837</span>
+          <span class="post-count">&nbsp; | &nbsp;字数841</span>
           
             
               <span class="post-comments-count">
@@ -313,9 +313,8 @@
 
       
         
-          
-            <h2 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h2><ol>
-<li><a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="external">参考第四节</a></li>
+          <h2 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h2><ol>
+<li><a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more">参考第四节</a></li>
 <li><p>流程图<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/hexo_process.png" alt=""></p>
 </li>
 <li><p>对于多终端来说，按照git pull-&gt;编辑博客-&gt;git push-&gt;hexo g -d的顺序就可以实现多终端同步效果</p>
@@ -326,84 +325,12 @@
 <li>旧终端/电脑hexo正常工作</li>
 <li>旧终端/电脑能通过hexo g -d正常发布至远程xxx.github.io</li>
 </ol>
-<h2 id="实施步骤"><a href="#实施步骤" class="headerlink" title="实施步骤"></a>实施步骤</h2><ol>
-<li><p>新建远程repo</p>
-<p>在github上新增repo，例如名为myhexo，地址为github.com/xxx/myhexo</p>
-</li>
-<li><p>在<strong>旧终端</strong>中创建本地repo</p>
-<p>进入本地hexo目录</p>
-<blockquote>
-<p>git init</p>
-</blockquote>
-<p>查看未提交的文件（默认不包含public、deploy文件）</p>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>根据查看结果将本地hexo建站原始文件纳入版本控制（我本地是scaffolds、source、themes文件夹以及.gitignore、_config.yml、package.json文件）</p>
-<blockquote>
-<p>git add …<br>git commit -m …</p>
-</blockquote>
-<p>需要注意的是.gitignore中需要增加一行，忽略~结尾的文件</p>
-<blockquote>
-<p>*~</p>
-</blockquote>
-</li>
-<li><p>在<strong>旧终端</strong>中创建远程分支连接</p>
-<blockquote>
-<p>git remote add origin git@github.com:xxx/myhexo.git<br>git remote -v </p>
-</blockquote>
-<p>显示如下：</p>
-<blockquote>
-<p>origin    git@github.com:XXX/myhexo.git (fetch)<br>origin    git@github.com:XXX/myhexo.git (push)</p>
-</blockquote>
-</li>
-<li><p>在<strong>旧终端</strong>中提交本地文件至远程repo</p>
-<blockquote>
-<p>git push -u origin master</p>
-</blockquote>
-</li>
-<li><p>换了终端以后</p>
-<p>在<strong>新终端</strong>中安装node、git环境，配置github sshkey</p>
-<p>在<strong>新终端</strong>中创建空目录作为hexo工作目录，从远程仓库中clone出之前备份的repo</p>
-<blockquote>
-<p>mkdir hexo<br>cd hexo<br>git init<br>git clone git@github.com:xxx/myhexo.git</p>
-</blockquote>
-<p>在<strong>新终端</strong>中git clone成功后，本地出现myhexo文件夹，开始安装hexo环境</p>
-<blockquote>
-<p>cd myhexo<br>npm install hexo<br>npm install<br>npm install hexo-deployer-git</p>
-</blockquote>
-<p>查看本地同步效果，访问localhost:4000</p>
-<blockquote>
-<p>hexo g<br>hexo server</p>
-</blockquote>
-</li>
-<li><p>在<strong>新终端</strong>中继续使用和管理hexo</p>
-<p>新建文章并修改</p>
-<blockquote>
-<p>hexo new xxx</p>
-</blockquote>
-<p>提交原始md文件至远程repo</p>
-<blockquote>
-<p>git status<br>git add<br>git commit -m xx<br>git push</p>
-</blockquote>
-<p>发布静态网页</p>
-<blockquote>
-<p>hexo g -d</p>
-</blockquote>
-</li>
-<li><p>切换至<strong>旧终端</strong>使用hexo</p>
-<p>更新网站原始文件</p>
-<blockquote>
-<p>git pull<br>hexo g<br>hexo server</p>
-</blockquote>
-<p>测试更新成功后，表明终端顺利切换完成</p>
-</li>
-</ol>
-<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><ol>
-<li>windows环境下，本地4000端口可能被占用，此时需要修改本地hexo目录下的<br>node_modules/hexo-server/index.js 的端口配置</li>
-</ol>
-
-          
+<h2 id="实施步骤"><a href="#实施步骤" class="headerlink" title="实施步骤"></a>实施步骤</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/02/hexo-change-os/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -486,7 +413,7 @@
               
             </span>
           
-          <span class="post-count">&nbsp; | &nbsp;字数471</span>
+          <span class="post-count">&nbsp; | &nbsp;字数475</span>
           
             
               <span class="post-comments-count">
@@ -524,23 +451,15 @@
 
       
         
-          
-            <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p><a href="http://www.jianshu.com/p/1d427e888dda" target="_blank" rel="external">dnspod</a></p>
-<h2 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h2><p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">配置大全</a></p>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>配置方法參考上一節<br><a href="https://portal.qiniu.com/" target="_blank" rel="external">七牛</a><br><img src="http://7xshxx.com1.z0.glb.clouddn.com/qiniu.jpg?imageView/2/w/100/" alt=""></p>
-<h2 id="阅读统计"><a href="#阅读统计" class="headerlink" title="阅读统计"></a>阅读统计</h2><p><a href="http://notes.xiamo.tk/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud" target="_blank" rel="external">旧版配置</a><br>新版配置： 直接在NexT主题的根目录下的_config.yml文件中找到对应配置项，修改如下：</p>
-<pre><code>leancloud_visitors: 
-    enable: true 
-    app_id: #&lt;AppID&gt; 
-    app_key: #&lt;AppKEY&gt;
-</code></pre><h2 id="站点统计"><a href="#站点统计" class="headerlink" title="站点统计"></a>站点统计</h2><p><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
-<h2 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h2><p><a href="http://blog.willin.wang/posts/2015/hexo-wordcount/" target="_blank" rel="external">参考</a><br>补充说明： 在theme的languages的zh-Hans.yml文件中找到post项，增加</p>
-<pre><code>wordcount: 字数
-</code></pre><p>然后在layout/macro/post.swig中合适的位置放置如下代码：</p>
-<pre><code>&lt;span class=&quot;post-count&quot;&gt;  |  {{__('post.wordcount')}}{{ wordcount(post.content) }}&lt;/span&gt;
-</code></pre><h2 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h2><p><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">Next配置参考</a></p>
-
-          
+          <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p><a href="http://www.jianshu.com/p/1d427e888dda">dnspod</a></p>
+<h2 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h2><p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/">配置大全</a></p>
+<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>配置方法參考上一節<br><a href="https://portal.qiniu.com/">七牛</a><br><img src="http://7xshxx.com1.z0.glb.clouddn.com/qiniu.jpg?imageView/2/w/100/" alt=""></p>
+<h2 id="阅读统计"><a href="#阅读统计" class="headerlink" title="阅读统计"></a>阅读统计</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/01/hexo配置优化/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
