@@ -71,13 +71,11 @@
 在github上新增repo，例如名为myhexo，地址为github.com/xxx/myhexo
 
 创建本地repo
-
 进入本地hexo目录
-
 
 git init
 
-+查看未提交的文件（默认不包含public">
+查看未提交的文件（默认不包含public、de">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 换终端/换电脑小记">
 <meta property="og:url" content="http://www.wangmuduo.com/2016/04/02/hexo-change-os/index.html">
@@ -96,14 +94,12 @@ git init
 在github上新增repo，例如名为myhexo，地址为github.com/xxx/myhexo
 
 创建本地repo
-
 进入本地hexo目录
-
 
 git init
 
-+查看未提交的文件（默认不包含public">
-<meta property="og:updated_time" content="2016-04-02T06:20:00.684Z">
+查看未提交的文件（默认不包含public、de">
+<meta property="og:updated_time" content="2016-04-02T06:43:34.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 换终端/换电脑小记">
 <meta name="twitter:description" content="主要思路
@@ -120,13 +116,11 @@ git init
 在github上新增repo，例如名为myhexo，地址为github.com/xxx/myhexo
 
 创建本地repo
-
 进入本地hexo目录
-
 
 git init
 
-+查看未提交的文件（默认不包含public">
+查看未提交的文件（默认不包含public、de">
 
 
 
@@ -331,7 +325,7 @@ git init
               
             </span>
           
-          <span class="post-count">&nbsp; | &nbsp;字数606</span>
+          <span class="post-count">&nbsp; | &nbsp;字数675</span>
           
             
               <span class="post-comments-count">
@@ -382,19 +376,21 @@ git init
 <p>在github上新增repo，例如名为myhexo，地址为github.com/xxx/myhexo</p>
 </li>
 <li><p>创建本地repo</p>
-<ul>
-<li>进入本地hexo目录</li>
-</ul>
+<p>进入本地hexo目录</p>
 <blockquote>
 <p>git init</p>
 </blockquote>
-<p>+查看未提交的文件（默认不包含public、deploy文件）</p>
+<p>查看未提交的文件（默认不包含public、deploy文件）</p>
 <blockquote>
 <p>git status</p>
 </blockquote>
-<p>+根据查看结果将本地hexo建站原始文件纳入版本控制（我本地是scaffolds、source、themes文件夹以及.gitignore、_config.yml、package.json文件）</p>
+<p>根据查看结果将本地hexo建站原始文件纳入版本控制（我本地是scaffolds、source、themes文件夹以及.gitignore、_config.yml、package.json文件）</p>
 <blockquote>
 <p>git add …<br>git commit -m …</p>
+</blockquote>
+<p>需要注意的是.gitignore中需要增加一行，忽略~结尾的文件</p>
+<blockquote>
+<p>*~</p>
 </blockquote>
 </li>
 <li><p>创建远程分支连接</p>
@@ -412,36 +408,37 @@ git init
 </blockquote>
 </li>
 <li><p>换了终端以后</p>
-<ul>
-<li><p>安装node、git环境，配置github sshkey</p>
-</li>
-<li><p>在新终端创建空目录作为hexo工作目录，从远程仓库中clone出之前备份的repo</p>
-</li>
-</ul>
+<p>安装node、git环境，配置github sshkey</p>
+<p>在新终端创建空目录作为hexo工作目录，从远程仓库中clone出之前备份的repo</p>
 <blockquote>
 <p>mkdir hexo<br>cd hexo<br>git init<br>git clone git@github.com:xxx/myhexo.git</p>
 </blockquote>
-<ul>
-<li>git clone成功后，本地出现myhexo文件夹，开始安装hexo环境</li>
-</ul>
+<p>git clone成功后，本地出现myhexo文件夹，开始安装hexo环境</p>
 <blockquote>
 <p>cd myhexo<br>npm install hexo<br>npm install<br>npm install hexo-deployer-git</p>
 </blockquote>
-<ul>
-<li>查看本地同步效果，访问localhost:4000</li>
-</ul>
+<p>查看本地同步效果，访问localhost:4000</p>
 <blockquote>
 <p>hexo g<br>hexo server</p>
 </blockquote>
 </li>
-<li><p>在新终端继续使用hexo</p>
+<li><p>在新终端继续使用和管理hexo</p>
+<p>新建文章并修改</p>
 <blockquote>
-<p>hexo new xxx<br>hexo g -d</p>
+<p>hexo new xxx</p>
+</blockquote>
+<p>提交原始md文件至远程repo</p>
+<blockquote>
+<p>git status<br>git add<br>git commit -m xx<br>git push</p>
+</blockquote>
+<p>发布静态网页</p>
+<blockquote>
+<p>hexo g -d</p>
 </blockquote>
 </li>
 </ol>
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><ol>
-<li>windows环境下，本地4000端口可能被占用，此时需修改本地hexo目录下的<br>node_modules/hexo-server/index.js 的端口配置</li>
+<li>windows环境下，本地4000端口可能被占用，此时需要修改本地hexo目录下的<br>node_modules/hexo-server/index.js 的端口配置</li>
 </ol>
 
       
@@ -551,7 +548,7 @@ git init
 	
           <div class="site-state-item site-state-posts">
             <a href="/404.html">
-	      <span class="site-state-item-count">1.2k </span>
+	      <span class="site-state-item-count">1.3k </span>
               <span class="site-state-item-name">字数</span>
             </a>
           </div>
