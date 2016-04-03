@@ -67,7 +67,7 @@
 通过I/O模型学习同步/异步、阻塞/非阻塞基础概念，参考资料如下：《Unix网络编程》《网络编程释疑之：同步，异步，阻塞，非阻塞》《Java NIO：浅析I/O模型》《高性能IO模型浅析》">
 <meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg">
 <meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/">
-<meta property="og:updated_time" content="2016-04-03T16:04:46.320Z">
+<meta property="og:updated_time" content="2016-04-03T16:07:45.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I/O模型学习小记">
 <meta name="twitter:description" content="基础概念
@@ -277,7 +277,7 @@
               
             </span>
           
-          <span class="post-count">&nbsp; | &nbsp;字数1,005</span>
+          <span class="post-count">&nbsp; | &nbsp;字数1,006</span>
           
             
               <span class="post-comments-count">
@@ -343,7 +343,8 @@
 <blockquote>
 <p>Synchronous I/O versus Asynchronous I/O</p>
 <p> POSIX defines these two terms as follows:</p>
-<p> A synchronous I/O operation causes the requesting process to be blocked until that I/O operation completes.<br>An asynchronous I/O operation does not cause the requesting process to be blocked.<br>Using these definitions, the first four I/O models (blocking, nonblocking, I/O multiplexing, and signal-driven I/O) are all <strong>synchronous</strong> because the actual I/O operation (recvfrom) blocks the process. Only the asynchronous I/O model matches the asynchronous I/O definition.</p>
+<p> A synchronous I/O operation causes the requesting process to be blocked until that I/O operation completes.<br>An asynchronous I/O operation does not cause the requesting process to be blocked.</p>
+<p>Using these definitions, the first four I/O models (blocking, nonblocking, I/O multiplexing, and signal-driven I/O) are all <strong>synchronous</strong> because the actual I/O operation (recvfrom) blocks the process. Only the asynchronous I/O model matches the asynchronous I/O definition.</p>
 </blockquote>
 
       
