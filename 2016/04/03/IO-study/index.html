@@ -67,7 +67,7 @@
 通过I/O模型学习同步/异步、阻塞/非阻塞基础概念，参考资料如下：《Unix网络编程》《网络编程释疑之：同步，异步，阻塞，非阻塞》《Java NIO：浅析I/O模型》《高性能IO模型浅析》">
 <meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg">
 <meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/">
-<meta property="og:updated_time" content="2016-04-03T15:54:57.170Z">
+<meta property="og:updated_time" content="2016-04-03T16:04:46.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I/O模型学习小记">
 <meta name="twitter:description" content="基础概念
@@ -277,7 +277,7 @@
               
             </span>
           
-          <span class="post-count">&nbsp; | &nbsp;字数1,009</span>
+          <span class="post-count">&nbsp; | &nbsp;字数1,005</span>
           
             
               <span class="post-comments-count">
@@ -326,7 +326,7 @@
 <li>B：等待内核将数据从内核空间拷贝至用户空间</li>
 </ul>
 </li>
-<li><strong>阻塞和非阻塞I/O</strong>的区别发生在A阶段，如用户进程始终等待A阶段完成，则为阻塞I/O，否则为非阻塞I/O，而在B阶段，都需要<strong>阻塞</strong>用户进程进行数据读写操作</li>
+<li><strong>阻塞和非阻塞I/O</strong>的区别发生在A阶段，如用户进程始终等待A阶段完成，则为阻塞I/O，否则为非阻塞I/O，而在B阶段，都需要用户进程进行数据读写操作</li>
 <li>从用户进程主体角度来看，<strong>异步I/O</strong>请求操作<strong>不感知</strong>内核主体的操作阶段，发送I/O请求后立即返回，内核会自动完成A、B阶段工作，并<strong>通知</strong>用户进程进行数据处理，此机制需要<strong>操作系统</strong>底层的支持，如下图所示<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg" alt=""></li>
 </ul>
 </li>
