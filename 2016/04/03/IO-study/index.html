@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,网络编程," />
 
 
 
@@ -57,15 +57,22 @@
 
 
 
-<meta name="description" content="stay foolish">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三个肥肥玩">
-<meta property="og:url" content="http://www.wangmuduo.com/archives/2016/index.html">
+<meta name="description" content="基础概念
+通过I/O模型学习同步/异步、阻塞/非阻塞基础概念，参考资料如下：《Unix网络编程》《网络编程释疑之：同步，异步，阻塞，非阻塞》《Java NIO：浅析I/O模型》《高性能IO模型浅析》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="I/O模型学习小记">
+<meta property="og:url" content="http://www.wangmuduo.com/2016/04/03/IO-study/index.html">
 <meta property="og:site_name" content="三个肥肥玩">
-<meta property="og:description" content="stay foolish">
+<meta property="og:description" content="基础概念
+通过I/O模型学习同步/异步、阻塞/非阻塞基础概念，参考资料如下：《Unix网络编程》《网络编程释疑之：同步，异步，阻塞，非阻塞》《Java NIO：浅析I/O模型》《高性能IO模型浅析》">
+<meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg">
+<meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/">
+<meta property="og:updated_time" content="2016-04-03T15:54:57.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三个肥肥玩">
-<meta name="twitter:description" content="stay foolish">
+<meta name="twitter:title" content="I/O模型学习小记">
+<meta name="twitter:description" content="基础概念
+通过I/O模型学习同步/异步、阻塞/非阻塞基础概念，参考资料如下：《Unix网络编程》《网络编程释疑之：同步，异步，阻塞，非阻塞》《Java NIO：浅析I/O模型》《高性能IO模型浅析》">
+<meta name="twitter:image" content="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg">
 
 
 
@@ -83,7 +90,7 @@
   };
 </script>
 
-  <title> 归档 | 三个肥肥玩 </title>
+  <title> I/O模型学习小记 | 三个肥肥玩 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -104,7 +111,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,177 +219,180 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/03/IO-study/" itemprop="url">
-              
-                <span itemprop="name">I/O模型学习小记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-03T23:44:40+08:00"
-              content="2016-04-03" >
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/02/hexo-change-os/" itemprop="url">
-              
-                <span itemprop="name">Hexo 换终端/换电脑小记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-02T14:00:53+08:00"
-              content="2016-04-02" >
-          04-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/01/hexo配置优化/" itemprop="url">
-              
-                <span itemprop="name">Hexo 配置小记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-01T00:06:16+08:00"
-              content="2016-04-01" >
-          04-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/03/30/hexo-install/" itemprop="url">
-              
-                <span itemprop="name">Hexo 安装小记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-30T23:25:14+08:00"
-              content="2016-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                I/O模型学习小记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-03T23:44:40+08:00" content="2016-04-03">
+              2016-04-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+          <span class="post-count">&nbsp; | &nbsp;字数1,009</span>
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/03/IO-study/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/03/IO-study/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/03/IO-study/" class="leancloud_visitors" data-flag-title="I/O模型学习小记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><ul>
+<li>通过I/O模型学习<strong>同步/异步、阻塞/非阻塞</strong>基础概念，参考资料如下：<br><a href="https://book.douban.com/subject/1500149/" target="_blank" rel="external">《Unix网络编程》</a><br><a href="http://yaocoder.blog.51cto.com/2668309/1308899" target="_blank" rel="external">《网络编程释疑之：同步，异步，阻塞，非阻塞》</a><br><a href="http://www.cnblogs.com/dolphin0520/p/3916526.html" target="_blank" rel="external">《Java NIO：浅析I/O模型》</a><br><a href="http://www.cnblogs.com/fanzhidongyzby/p/4098546.html" target="_blank" rel="external">《高性能IO模型浅析》</a></li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>基础概念学习小结<ul>
+<li>系统I/O操作涉及用户进程和内核进程两个通信主体，有四种<strong>常用</strong>I/O模型：阻塞I/O，非阻塞I/O，I/O复用，异步I/O</li>
+<li>从用户进程主体角度来看，<strong>同步I/O</strong>请求操作分为两个阶段<ul>
+<li>A：等待内核准备数据，即数据完全到达内核空间</li>
+<li>B：等待内核将数据从内核空间拷贝至用户空间</li>
+</ul>
+</li>
+<li><strong>阻塞和非阻塞I/O</strong>的区别发生在A阶段，如用户进程始终等待A阶段完成，则为阻塞I/O，否则为非阻塞I/O，而在B阶段，都需要<strong>阻塞</strong>用户进程进行数据读写操作</li>
+<li>从用户进程主体角度来看，<strong>异步I/O</strong>请求操作<strong>不感知</strong>内核主体的操作阶段，发送I/O请求后立即返回，内核会自动完成A、B阶段工作，并<strong>通知</strong>用户进程进行数据处理，此机制需要<strong>操作系统</strong>底层的支持，如下图所示<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="多路复用模型-IO-Multiplexing"><a href="#多路复用模型-IO-Multiplexing" class="headerlink" title="多路复用模型(IO Multiplexing)"></a>多路复用模型(IO Multiplexing)</h2><ul>
+<li>多路复用I/O模型是<strong>同步阻塞</strong>的，这里是从单个I/O线程的角度来说</li>
+<li>多路复用I/O<strong>阻塞</strong>在select、epoll这样的系统调用上，而不是阻塞在I/O系统调用recvfrom上<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/" alt=""></li>
+<li>对于单个I/O操作，多路复用并不比阻塞I/O有优势，反而增加了一次系统调用</li>
+<li>多路复用I/O的优势体现在同时处理多个文件描述符输入输出操作、多个套接字操作的时候，有任何一个准备就绪，select就可以返回（从并发的角度看，也有人认为这是“异步”，但从单个用户线程的角度看，仍处于等待数据或者拷贝数据的状态）</li>
+<li>多路复用I/O中，轮询每个socket状态是内核在进行的，这个效率要比用户进程要高的多，因此性能强于非阻塞I/O在用户进程中的轮询</li>
+<li>多路复用的几种系统调用之间的区别，参考<a href="http://www.cnblogs.com/Anker/p/3265058.html" target="_blank" rel="external">《select、poll、epoll之间的区别总结》</a></li>
+</ul>
+<h2 id="容易发生混淆的坑"><a href="#容易发生混淆的坑" class="headerlink" title="容易发生混淆的坑"></a>容易发生混淆的坑</h2><p>很多人将多路复用模型(IO Multiplexing)称之为异步阻塞I/O，这种方式将引起误解，为此，澄清如下：</p>
+<blockquote>
+<p>Synchronous I/O versus Asynchronous I/O</p>
+<p> POSIX defines these two terms as follows:</p>
+<p> A synchronous I/O operation causes the requesting process to be blocked until that I/O operation completes.<br>An asynchronous I/O operation does not cause the requesting process to be blocked.<br>Using these definitions, the first four I/O models (blocking, nonblocking, I/O multiplexing, and signal-driven I/O) are all <strong>synchronous</strong> because the actual I/O operation (recvfrom) blocks the process. Only the asynchronous I/O model matches the asynchronous I/O definition.</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/网络编程/" rel="tag">#网络编程</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/02/hexo-change-os/" rel="next" title="Hexo 换终端/换电脑小记">
+                <i class="fa fa-chevron-left"></i> Hexo 换终端/换电脑小记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -390,6 +400,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/03/IO-study/"
+           data-title="I/O模型学习小记" data-url="http://www.wangmuduo.com/2016/04/03/IO-study/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -409,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -462,6 +489,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础概念"><span class="nav-number">1.</span> <span class="nav-text">基础概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多路复用模型-IO-Multiplexing"><span class="nav-number">2.</span> <span class="nav-text">多路复用模型(IO Multiplexing)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容易发生混淆的坑"><span class="nav-number">3.</span> <span class="nav-text">容易发生混淆的坑</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -566,11 +604,10 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
 
 
   
