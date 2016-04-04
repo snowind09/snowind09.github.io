@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="网络编程,Java," />
 
 
 
@@ -57,15 +57,34 @@
 
 
 
-<meta name="description" content="stay foolish">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三个肥肥玩">
-<meta property="og:url" content="http://www.wangmuduo.com/archives/2016/03/index.html">
+<meta name="description" content="blocking I/O
+accept()方法被阻塞，直到新的连接请求到达
+read()方法被阻塞，直到新的数据到达
+write()方法被阻塞，直到写缓冲区有写入空间
+
+处于阻塞状态的主线程（main thread）无法处理其他请求，传统的多线程以及改进的线程池方案都属于Blocking I/O">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Non-blocking I/O学习">
+<meta property="og:url" content="http://www.wangmuduo.com/2016/04/04/20160404-nio/index.html">
 <meta property="og:site_name" content="三个肥肥玩">
-<meta property="og:description" content="stay foolish">
+<meta property="og:description" content="blocking I/O
+accept()方法被阻塞，直到新的连接请求到达
+read()方法被阻塞，直到新的数据到达
+write()方法被阻塞，直到写缓冲区有写入空间
+
+处于阻塞状态的主线程（main thread）无法处理其他请求，传统的多线程以及改进的线程池方案都属于Blocking I/O">
+<meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/BIO.jpg">
+<meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/IO%20compare.png">
+<meta property="og:updated_time" content="2016-04-04T15:53:40.522Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三个肥肥玩">
-<meta name="twitter:description" content="stay foolish">
+<meta name="twitter:title" content="Non-blocking I/O学习">
+<meta name="twitter:description" content="blocking I/O
+accept()方法被阻塞，直到新的连接请求到达
+read()方法被阻塞，直到新的数据到达
+write()方法被阻塞，直到写缓冲区有写入空间
+
+处于阻塞状态的主线程（main thread）无法处理其他请求，传统的多线程以及改进的线程池方案都属于Blocking I/O">
+<meta name="twitter:image" content="http://7xshxx.com2.z0.glb.clouddn.com/BIO.jpg">
 
 
 
@@ -83,7 +102,7 @@
   };
 </script>
 
-  <title> 归档 | 三个肥肥玩 </title>
+  <title> Non-blocking I/O学习 | 三个肥肥玩 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -104,7 +123,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,66 +231,167 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 5 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Non-blocking I/O学习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-04T23:42:01+08:00" content="2016-04-04">
+              2016-04-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+          <span class="post-count">&nbsp; | &nbsp;字数663</span>
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/04/20160404-nio/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/04/20160404-nio/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/04/20160404-nio/" class="leancloud_visitors" data-flag-title="Non-blocking I/O学习">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <h2 id="blocking-I-O"><a href="#blocking-I-O" class="headerlink" title="blocking I/O"></a>blocking I/O</h2><ol>
+<li>accept()方法被阻塞，直到新的连接请求到达</li>
+<li>read()方法被阻塞，直到新的数据到达</li>
+<li>write()方法被阻塞，直到写缓冲区有写入空间</li>
+</ol>
+<p>处于阻塞状态的主线程（main thread）无法处理其他请求，传统的<strong>多线程</strong>以及改进的<strong>线程池</strong>方案都属于Blocking I/O<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/BIO.jpg" alt=""></p>
+<a id="more"></a>
+<h2 id="Non-blocking-I-O"><a href="#Non-blocking-I-O" class="headerlink" title="Non-blocking I/O"></a>Non-blocking I/O</h2><p>在NIO中，每一个数据连接都可以对应为一个Channel，可以把针对某个Channel的特定感兴趣的事件注册到Selector上，监听请求的线程只要检测Selector的状态就好。当Selector收到特定的事件时，监听线程将此请求交由执行线程处理，执行线程通过这个Selector获取相关的Channel，进行相应的处理（NIO的方式）工作。而监听线程则继续检查Selector。这样一个线程就可以复用，来处理不同Channel上的数据请求。</p>
+<ol>
+<li>client端连接操作是异步的，可以通过多路复用注册OP_CONNECT等待后续结果</li>
+<li>SocketChannel读写操作都是异步的，如无可读写的数据不会同步等待，直接返回，这样I/O通信线程就可以处理其他链路，不需要同步等待该链路可用</li>
+<li>线程模型优化，如JDK在linux上通过epoll实现，一个selector线程可以处理高并发的连接请求</li>
+</ol>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><ol>
+<li>无论是阻塞还是非阻塞I/O，通常都会有一个线程专门负责监听连接请求，只不过在处理请求时，非阻塞I/O采用selector轮询机制进行<strong>基于事件的异步非阻塞I/O</strong>方式，区别于简单线程池同步阻塞I/O处理方式(伪异步I/O)</li>
+<li>几种网络I/O处理方式<br>M是客户端个数，N是服务端线程数，伪异步是指线程池方案<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/IO%20compare.png" alt=""></li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://book.douban.com/subject/26373138/" target="_blank" rel="external">Netty权威指南</a><br><a href="http://www.molotang.com/articles/906.html" target="_blank" rel="external">Java NIO中的Selector和IO复用</a></p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络编程/" rel="tag">#网络编程</a>
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
         </div>
       
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/03/IO-study/" rel="next" title="I/O模型学习小记">
+                <i class="fa fa-chevron-left"></i> I/O模型学习小记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/03/30/hexo-install/" itemprop="url">
-              
-                <span itemprop="name">Hexo 安装小记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-30T23:25:14+08:00"
-              content="2016-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -279,6 +399,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/04/20160404-nio/"
+           data-title="Non-blocking I/O学习" data-url="http://www.wangmuduo.com/2016/04/04/20160404-nio/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -298,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -351,6 +488,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#blocking-I-O"><span class="nav-number">1.</span> <span class="nav-text">blocking I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Non-blocking-I-O"><span class="nav-number">2.</span> <span class="nav-text">Non-blocking I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较"><span class="nav-number">3.</span> <span class="nav-text">比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -455,11 +603,10 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
 
 
   
