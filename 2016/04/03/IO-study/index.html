@@ -67,7 +67,7 @@
 通过I/O模型学习同步/异步、阻塞/非阻塞基础概念，参考资料如下：《Unix网络编程》《网络编程释疑之：同步，异步，阻塞，非阻塞》《Java NIO：浅析I/O模型》《高性能IO模型浅析》">
 <meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/IO_diff.jpg">
 <meta property="og:image" content="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/">
-<meta property="og:updated_time" content="2016-04-03T16:07:45.417Z">
+<meta property="og:updated_time" content="2016-04-04T11:53:05.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I/O模型学习小记">
 <meta name="twitter:description" content="基础概念
@@ -277,7 +277,7 @@
               
             </span>
           
-          <span class="post-count">&nbsp; | &nbsp;字数1,006</span>
+          <span class="post-count">&nbsp; | &nbsp;字数1,021</span>
           
             
               <span class="post-comments-count">
@@ -332,8 +332,8 @@
 </li>
 </ul>
 <h2 id="多路复用模型-IO-Multiplexing"><a href="#多路复用模型-IO-Multiplexing" class="headerlink" title="多路复用模型(IO Multiplexing)"></a>多路复用模型(IO Multiplexing)</h2><ul>
-<li>多路复用I/O模型是<strong>同步阻塞</strong>的，这里是从单个I/O线程的角度来说</li>
-<li>多路复用I/O<strong>阻塞</strong>在select、epoll这样的系统调用上，而不是阻塞在I/O系统调用recvfrom上<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/" alt=""></li>
+<li>多路复用I/O模型是<strong>同步阻塞</strong>的，这里是从应用进程的角度来说</li>
+<li>多路复用I/O<strong>阻塞</strong>在select、epoll这样的系统调用上，而不是阻塞在I/O系统调用recvfrom上，因此也被称为<strong>非阻塞I/O</strong>(Non-blocking I/O)<br><img src="http://7xshxx.com2.z0.glb.clouddn.com/duolufuyong.jpg?imageView/2/w/700/" alt=""></li>
 <li>对于单个I/O操作，多路复用并不比阻塞I/O有优势，反而增加了一次系统调用</li>
 <li>多路复用I/O的优势体现在同时处理多个文件描述符输入输出操作、多个套接字操作的时候，有任何一个准备就绪，select就可以返回（从并发的角度看，也有人认为这是“异步”，但从单个用户线程的角度看，仍处于等待数据或者拷贝数据的状态）</li>
 <li>多路复用I/O中，轮询每个socket状态是内核在进行的，这个效率要比用户进程要高的多，因此性能强于非阻塞I/O在用户进程中的轮询</li>
